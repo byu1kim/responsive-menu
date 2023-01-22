@@ -7,3 +7,18 @@ const handleClick = (e) => {
 };
 
 menuBtn.addEventListener("click", handleClick);
+
+const mql = window.matchMedia("(min-width: 560px)");
+
+mql.addListener(removeTransition);
+
+function removeTransition(e) {
+  if (e.matches) {
+    body.classList.remove("show");
+  }
+}
+
+body.addEventListener("transitionend", function () {
+  if (!body.classList.contains("show")) {
+  }
+});
