@@ -7,3 +7,14 @@ const handleClick = (e) => {
 };
 
 menuBtn.addEventListener("click", handleClick);
+
+// Hidden mobile menu changing window size
+const mql = window.matchMedia("(min-width: 660px)");
+
+function removeTransition(e) {
+  if (e.matches) {
+    body.classList.remove("show");
+  }
+}
+
+mql.addListener(removeTransition);
