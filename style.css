@@ -15,16 +15,14 @@ html {
 /* Hamburger */
 header {
   background-color: pink;
-}
-
-.menu-header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
 }
 
 .logo {
+  padding: 10px 20px;
 }
 
 .menu-btn {
@@ -33,6 +31,7 @@ header {
 }
 
 .menu-bars {
+  margin-right: 20px;
 }
 
 .bar,
@@ -102,5 +101,42 @@ nav li a:hover {
 .show nav {
   transition: height 0.3s ease, visibility 0s;
   visibility: visible;
-  height: 351px; /* a height x number of a */
+  height: 351px; /* (height a) x (number of a) */
+}
+
+/* DESKTOP */
+/* media size depends on width of nav */
+@media (min-width: 660px) {
+  header {
+    flex-wrap: nowrap;
+  }
+
+  .logo {
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  nav {
+    visibility: visible;
+    width: inherit;
+    height: 100%;
+    background-color: transparent;
+    padding-right: 20px;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  nav li a {
+    padding: 10px;
+    color: gray;
+  }
+
+  nav li a:hover {
+    color: hotpink;
+    background-color: transparent;
+  }
 }
